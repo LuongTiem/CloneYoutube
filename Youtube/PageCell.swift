@@ -82,7 +82,8 @@ extension PageCell : UICollectionViewDelegate, UICollectionViewDelegateFlowLayou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        homeControllerPush?.pushView()
+        homeControllerPush?.presentView()
+     
     }
     
 }

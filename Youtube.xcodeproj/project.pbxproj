@@ -23,9 +23,12 @@
 		5F4BF8F61DC8AAC500592D98 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BF8F51DC8AAC500592D98 /* SettingsLauncher.swift */; };
 		5F65CEEA1DC9EBB200C2C58D /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F65CEE81DC9EBB200C2C58D /* PageCell.swift */; };
 		5F65CEEB1DC9EBB200C2C58D /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F65CEE91DC9EBB200C2C58D /* PageCell.xib */; };
+		5F8F22631DCA321D0009E0DF /* CellDetailVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F22611DCA321D0009E0DF /* CellDetailVideo.swift */; };
+		5F8F22641DCA321D0009E0DF /* CellDetailVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F8F22621DCA321D0009E0DF /* CellDetailVideo.xib */; };
 		5F92CE3D1DC7AA3600A4D3D6 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F92CE3B1DC7AA3500A4D3D6 /* MenuCell.swift */; };
 		5F92CE3E1DC7AA3600A4D3D6 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F92CE3C1DC7AA3500A4D3D6 /* MenuCell.xib */; };
 		5F92CE401DC7ABAC00A4D3D6 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F92CE3F1DC7ABAC00A4D3D6 /* MenuBar.swift */; };
+		5FD5DEA01DCA1944000F5C75 /* DetailVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD5DE9F1DCA1944000F5C75 /* DetailVideo.swift */; };
 		5FE0A4C11DC91EFB009B3B56 /* CellSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE0A4BF1DC91EFB009B3B56 /* CellSetting.swift */; };
 		5FE0A4C21DC91EFB009B3B56 /* CellSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FE0A4C01DC91EFB009B3B56 /* CellSetting.xib */; };
 		5FF36EEE1DC9A62F00FC9DA1 /* EnumSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF36EED1DC9A62F00FC9DA1 /* EnumSetting.swift */; };
@@ -52,9 +55,12 @@
 		5F4BF8F51DC8AAC500592D98 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		5F65CEE81DC9EBB200C2C58D /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		5F65CEE91DC9EBB200C2C58D /* PageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
+		5F8F22611DCA321D0009E0DF /* CellDetailVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDetailVideo.swift; sourceTree = "<group>"; };
+		5F8F22621DCA321D0009E0DF /* CellDetailVideo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellDetailVideo.xib; sourceTree = "<group>"; };
 		5F92CE3B1DC7AA3500A4D3D6 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		5F92CE3C1DC7AA3500A4D3D6 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		5F92CE3F1DC7ABAC00A4D3D6 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		5FD5DE9F1DCA1944000F5C75 /* DetailVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVideo.swift; sourceTree = "<group>"; };
 		5FE0A4BF1DC91EFB009B3B56 /* CellSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSetting.swift; sourceTree = "<group>"; };
 		5FE0A4C01DC91EFB009B3B56 /* CellSetting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellSetting.xib; sourceTree = "<group>"; };
 		5FF36EED1DC9A62F00FC9DA1 /* EnumSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumSetting.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				5F92CE3F1DC7ABAC00A4D3D6 /* MenuBar.swift */,
+				5F8F225C1DCA2A160009E0DF /* CellDetailVideo */,
 				5F65CEEC1DC9EBB900C2C58D /* PageCollectionViewCell */,
 				5FE0A4BE1DC91EDC009B3B56 /* CellSetting */,
 				5F92CE3A1DC7AA1200A4D3D6 /* MenuCell */,
@@ -138,6 +145,7 @@
 				5F2F26A11DC7300100BF44C0 /* HomeController.swift */,
 				5F4BF8F51DC8AAC500592D98 /* SettingsLauncher.swift */,
 				5FF36EEF1DC9B79500FC9DA1 /* DetailSettings.swift */,
+				5FD5DE9F1DCA1944000F5C75 /* DetailVideo.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,6 +177,15 @@
 				5F65CEE91DC9EBB200C2C58D /* PageCell.xib */,
 			);
 			name = PageCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		5F8F225C1DCA2A160009E0DF /* CellDetailVideo */ = {
+			isa = PBXGroup;
+			children = (
+				5F8F22611DCA321D0009E0DF /* CellDetailVideo.swift */,
+				5F8F22621DCA321D0009E0DF /* CellDetailVideo.xib */,
+			);
+			name = CellDetailVideo;
 			sourceTree = "<group>";
 		};
 		5F92CE3A1DC7AA1200A4D3D6 /* MenuCell */ = {
@@ -274,6 +291,7 @@
 				5F2F26A71DC7300100BF44C0 /* Assets.xcassets in Resources */,
 				5F92CE3E1DC7AA3600A4D3D6 /* MenuCell.xib in Resources */,
 				5F2F26B81DC731B000BF44C0 /* HomeCell.xib in Resources */,
+				5F8F22641DCA321D0009E0DF /* CellDetailVideo.xib in Resources */,
 				5F2F26A51DC7300100BF44C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8F22631DCA321D0009E0DF /* CellDetailVideo.swift in Sources */,
 				5F2F26A21DC7300100BF44C0 /* HomeController.swift in Sources */,
 				5FF36EF21DC9C80600FC9DA1 /* ExtensionView.swift in Sources */,
 				5F92CE3D1DC7AA3600A4D3D6 /* MenuCell.swift in Sources */,
@@ -341,6 +360,7 @@
 				5F2F26A01DC7300100BF44C0 /* AppDelegate.swift in Sources */,
 				5F65CEEA1DC9EBB200C2C58D /* PageCell.swift in Sources */,
 				5F2138761DC85E000021DBD7 /* Video.swift in Sources */,
+				5FD5DEA01DCA1944000F5C75 /* DetailVideo.swift in Sources */,
 				5F3E20551DC8F08F0019FF6D /* Setting.swift in Sources */,
 				5FF36EEE1DC9A62F00FC9DA1 /* EnumSetting.swift in Sources */,
 				5F4BF8F61DC8AAC500592D98 /* SettingsLauncher.swift in Sources */,

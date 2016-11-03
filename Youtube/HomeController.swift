@@ -178,9 +178,9 @@ class HomeController: UIViewController {
     }
     
     
-    func pushView(){
-        let detail = self.storyboard?.instantiateViewController(withIdentifier: "detailVC")
-        self.navigationController?.pushViewController(detail!, animated: true)
+    func presentView(){
+        let detail = self.storyboard?.instantiateViewController(withIdentifier: "detailVideo") as! DetailVideo
+        self.present(detail, animated: true, completion: nil)
     }
     
     //MARK: UPDATE VIEW
