@@ -12,11 +12,17 @@ import Kingfisher
 
 class HomeController: UIViewController {
     
+    
+    
+    
+    var delegatePage2:DelegateIndexPage?
+    
     let cellID = "Cell"
     var listVideoHome = [Video]()
     var listTranding = [Video]()
     var listSubcription = [Video]()
     let titles = ["Home", "Trending", "Subscriptions", "Account"]
+    var indexPage: Int = 0
     
     @IBOutlet weak var menuBar: MenuBar!
     @IBOutlet weak var layout: UICollectionViewFlowLayout!
@@ -43,13 +49,16 @@ class HomeController: UIViewController {
         titleViews.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleViews
         
-
+        
         collectionView.delegate = self
         collectionView.dataSource  = self
         
         
         self.automaticallyAdjustsScrollViewInsets = false
         self.navigationController?.hidesBarsOnSwipe = true
+        //        self.collectionView.translatesAutoresizingMaskIntoConstraints = false
+        //        self.collectionView.clipsToBounds = false
+        
         
         setupNavigationBar()
         setupMenuBar()
@@ -57,7 +66,7 @@ class HomeController: UIViewController {
         loadData()
         
     }
-    //MARK: LOAD DATA 
+    //MARK: LOAD DATA
     func loadData(){
         
         ManagerData.shareInstance.getDataHome { (result) in
@@ -172,27 +181,40 @@ class HomeController: UIViewController {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let index = targetContentOffset.move().x / view.frame.width
         let indexPath  =  IndexPath(item: Int(index), section: 0)
+        indexPage = Int(index)
         menuBar.collectionViewMenu.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         
         setTitleForMenu(menuIndex: Int(index))
     }
     
     
-    func presentView(){
+    func presentView(index : Int){
         let detail = self.storyboard?.instantiateViewController(withIdentifier: "detailVideo") as! DetailVideo
+            detail.requestVideo = listVideoHome[index]
         self.present(detail, animated: true, completion: nil)
     }
     
     //MARK: UPDATE VIEW
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        layout.invalidateLayout()
-    }
+    
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        
         self.menuBar.layoutMenu.invalidateLayout()
-        self.collectionView.collectionViewLayout.invalidateLayout()
+        self.layout.finalizeLayoutTransition()
+        
+        DispatchQueue.main.async {
+        
+            self.scrollToIndexMenu(menuIndex: self.indexPage)
+        }
+        
+        print("SEND \(menuBar.index)")
+        print(indexPage)
+        
+        self.collectionView.reloadData()
+        
+        super.willTransition(to: newCollection, with: coordinator)
+       
         
         
     }
@@ -206,7 +228,7 @@ extension HomeController : UICollectionViewDelegateFlowLayout,UICollectionViewDe
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: collectionView.frame.height)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
     
@@ -218,12 +240,12 @@ extension HomeController : UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 4
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PageCell
-            cell.homeControllerPush = self
+        cell.homeControllerPush = self
         switch indexPath.item {
         case 0:
             cell.videos = listVideoHome
@@ -236,7 +258,7 @@ extension HomeController : UICollectionViewDataSource {
         }
         return cell
     }
-   
+    
     
 }
 

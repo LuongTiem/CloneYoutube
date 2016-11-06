@@ -8,18 +8,24 @@
 
 import UIKit
 
+
+protocol DelegateIndexPage {
+    
+    func scrollToIndexMenu(menuIndex : Int)
+}
+
+
 class MenuBar: UIView,UICollectionViewDataSource {
     
     let cellMenu = "CellMenu"
     @IBOutlet weak var layoutMenu: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionViewMenu: UICollectionView!
-   
     
+    var index = 0
+    var check: Bool = false
     
     let imageNames = ["home", "trending", "subscriptions", "account"]
     var homeController : HomeController?
-    
-    
     
     var horizontalBarLeftAuchorContraint : NSLayoutConstraint?
     
@@ -45,7 +51,7 @@ class MenuBar: UIView,UICollectionViewDataSource {
         collectionViewMenu.delegate = self
         collectionViewMenu.dataSource = self
         layoutMenu.scrollDirection = .horizontal
-       
+        
         collectionViewMenu.register(UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: cellMenu)
         let selectedIndexPath = IndexPath(item: 0, section: 0)
         collectionViewMenu.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .centeredHorizontally)
@@ -56,6 +62,8 @@ class MenuBar: UIView,UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellMenu, for: indexPath) as! MenuCell
         cell.imageViews.image = UIImage(named: imageNames[indexPath.item])?.withRenderingMode(.alwaysTemplate)
         cell.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13)
+        
+    
         return cell
     }
     
@@ -65,7 +73,7 @@ class MenuBar: UIView,UICollectionViewDataSource {
         return 4
     }
     
-   
+    
     
 }
 
@@ -78,34 +86,28 @@ extension MenuBar : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-//         let x = CGFloat(indexPath.item) * frame.width / 4
-//        horizontalBarLeftAuchorContraint?.constant = x
-//        
-//        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-//            self.layoutIfNeeded()
-//            
-//        }, completion: nil)
         
         if homeController == nil {
             print(" NIL ")
         }
+        index = indexPath.item
+        homeController?.scrollToIndexMenu(menuIndex: indexPath.item)
         
-       homeController?.scrollToIndexMenu(menuIndex: indexPath.item)
-    
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: frame.width/4, height: frame.height)
     }
-
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0 
+        return 0
     }
     
 }

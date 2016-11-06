@@ -82,7 +82,7 @@ extension PageCell : UICollectionViewDelegate, UICollectionViewDelegateFlowLayou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        homeControllerPush?.presentView()
+        homeControllerPush?.presentView(index: indexPath.row)
      
     }
     
@@ -93,7 +93,7 @@ extension PageCell : UICollectionViewDataSource, UICollectionViewDataSourcePrefe
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(listVideoHome.count)
+
         return listVideoHome.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

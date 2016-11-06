@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51CF9022408D97E3F76975F7 /* Pods_Youtube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF03FACA57CDF43ADD55FFB8 /* Pods_Youtube.framework */; };
+		5F1B60971DCF01AC00362965 /* SmallVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1B60961DCF01AC00362965 /* SmallVideo.swift */; };
 		5F2138741DC85C140021DBD7 /* ManagerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2138731DC85C140021DBD7 /* ManagerData.swift */; };
 		5F2138761DC85E000021DBD7 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2138751DC85E000021DBD7 /* Video.swift */; };
 		5F237DDD1DC73D5F000D9AFE /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F237DDC1DC73D5F000D9AFE /* ExtensionColor.swift */; };
@@ -20,9 +21,14 @@
 		5F2F26B81DC731B000BF44C0 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F2F26B61DC731B000BF44C0 /* HomeCell.xib */; };
 		5F3C90451DC861B40004E58B /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C90441DC861B40004E58B /* Channel.swift */; };
 		5F3E20551DC8F08F0019FF6D /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3E20541DC8F08F0019FF6D /* Setting.swift */; };
+		5F40A9A21DCB3434006A7C6C /* ExtensionAVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F40A9A11DCB3434006A7C6C /* ExtensionAVPlayer.swift */; };
 		5F4BF8F61DC8AAC500592D98 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4BF8F51DC8AAC500592D98 /* SettingsLauncher.swift */; };
 		5F65CEEA1DC9EBB200C2C58D /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F65CEE81DC9EBB200C2C58D /* PageCell.swift */; };
 		5F65CEEB1DC9EBB200C2C58D /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F65CEE91DC9EBB200C2C58D /* PageCell.xib */; };
+		5F76E6F41DCE4EAC0074B6F7 /* CellDetailVideoRow2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76E6F21DCE4EAC0074B6F7 /* CellDetailVideoRow2.swift */; };
+		5F76E6F51DCE4EAC0074B6F7 /* CellDetailVideoRow2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F76E6F31DCE4EAC0074B6F7 /* CellDetailVideoRow2.xib */; };
+		5F76E6F81DCE4EC30074B6F7 /* CellDetailVideoRow3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76E6F61DCE4EC30074B6F7 /* CellDetailVideoRow3.swift */; };
+		5F76E6F91DCE4EC30074B6F7 /* CellDetailVideoRow3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F76E6F71DCE4EC30074B6F7 /* CellDetailVideoRow3.xib */; };
 		5F8F22631DCA321D0009E0DF /* CellDetailVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F22611DCA321D0009E0DF /* CellDetailVideo.swift */; };
 		5F8F22641DCA321D0009E0DF /* CellDetailVideo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F8F22621DCA321D0009E0DF /* CellDetailVideo.xib */; };
 		5F92CE3D1DC7AA3600A4D3D6 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F92CE3B1DC7AA3500A4D3D6 /* MenuCell.swift */; };
@@ -38,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1FEDA5D738B373690E265A10 /* Pods-Youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.release.xcconfig"; sourceTree = "<group>"; };
+		5F1B60961DCF01AC00362965 /* SmallVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallVideo.swift; sourceTree = "<group>"; };
 		5F2138731DC85C140021DBD7 /* ManagerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerData.swift; sourceTree = "<group>"; };
 		5F2138751DC85E000021DBD7 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		5F237DDC1DC73D5F000D9AFE /* ExtensionColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
@@ -52,9 +59,14 @@
 		5F2F26B61DC731B000BF44C0 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		5F3C90441DC861B40004E58B /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		5F3E20541DC8F08F0019FF6D /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		5F40A9A11DCB3434006A7C6C /* ExtensionAVPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionAVPlayer.swift; sourceTree = "<group>"; };
 		5F4BF8F51DC8AAC500592D98 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		5F65CEE81DC9EBB200C2C58D /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		5F65CEE91DC9EBB200C2C58D /* PageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
+		5F76E6F21DCE4EAC0074B6F7 /* CellDetailVideoRow2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDetailVideoRow2.swift; sourceTree = "<group>"; };
+		5F76E6F31DCE4EAC0074B6F7 /* CellDetailVideoRow2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellDetailVideoRow2.xib; sourceTree = "<group>"; };
+		5F76E6F61DCE4EC30074B6F7 /* CellDetailVideoRow3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDetailVideoRow3.swift; sourceTree = "<group>"; };
+		5F76E6F71DCE4EC30074B6F7 /* CellDetailVideoRow3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellDetailVideoRow3.xib; sourceTree = "<group>"; };
 		5F8F22611DCA321D0009E0DF /* CellDetailVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDetailVideo.swift; sourceTree = "<group>"; };
 		5F8F22621DCA321D0009E0DF /* CellDetailVideo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellDetailVideo.xib; sourceTree = "<group>"; };
 		5F92CE3B1DC7AA3500A4D3D6 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -85,6 +97,7 @@
 		5F237DDB1DC73D3F000D9AFE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5F40A9A11DCB3434006A7C6C /* ExtensionAVPlayer.swift */,
 				5F237DDC1DC73D5F000D9AFE /* ExtensionColor.swift */,
 				5FF36EED1DC9A62F00FC9DA1 /* EnumSetting.swift */,
 				5FF36EF11DC9C80600FC9DA1 /* ExtensionView.swift */,
@@ -157,6 +170,7 @@
 				5F2138751DC85E000021DBD7 /* Video.swift */,
 				5F3C90441DC861B40004E58B /* Channel.swift */,
 				5F3E20541DC8F08F0019FF6D /* Setting.swift */,
+				5F1B60961DCF01AC00362965 /* SmallVideo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -184,6 +198,10 @@
 			children = (
 				5F8F22611DCA321D0009E0DF /* CellDetailVideo.swift */,
 				5F8F22621DCA321D0009E0DF /* CellDetailVideo.xib */,
+				5F76E6F21DCE4EAC0074B6F7 /* CellDetailVideoRow2.swift */,
+				5F76E6F31DCE4EAC0074B6F7 /* CellDetailVideoRow2.xib */,
+				5F76E6F61DCE4EC30074B6F7 /* CellDetailVideoRow3.swift */,
+				5F76E6F71DCE4EC30074B6F7 /* CellDetailVideoRow3.xib */,
 			);
 			name = CellDetailVideo;
 			sourceTree = "<group>";
@@ -285,8 +303,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F76E6F51DCE4EAC0074B6F7 /* CellDetailVideoRow2.xib in Resources */,
 				5FE0A4C21DC91EFB009B3B56 /* CellSetting.xib in Resources */,
 				5F2F26AA1DC7300100BF44C0 /* LaunchScreen.storyboard in Resources */,
+				5F76E6F91DCE4EC30074B6F7 /* CellDetailVideoRow3.xib in Resources */,
 				5F65CEEB1DC9EBB200C2C58D /* PageCell.xib in Resources */,
 				5F2F26A71DC7300100BF44C0 /* Assets.xcassets in Resources */,
 				5F92CE3E1DC7AA3600A4D3D6 /* MenuCell.xib in Resources */,
@@ -351,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F40A9A21DCB3434006A7C6C /* ExtensionAVPlayer.swift in Sources */,
 				5F8F22631DCA321D0009E0DF /* CellDetailVideo.swift in Sources */,
 				5F2F26A21DC7300100BF44C0 /* HomeController.swift in Sources */,
 				5FF36EF21DC9C80600FC9DA1 /* ExtensionView.swift in Sources */,
@@ -358,7 +379,9 @@
 				5F92CE401DC7ABAC00A4D3D6 /* MenuBar.swift in Sources */,
 				5F2F26B71DC731B000BF44C0 /* HomeCell.swift in Sources */,
 				5F2F26A01DC7300100BF44C0 /* AppDelegate.swift in Sources */,
+				5F76E6F41DCE4EAC0074B6F7 /* CellDetailVideoRow2.swift in Sources */,
 				5F65CEEA1DC9EBB200C2C58D /* PageCell.swift in Sources */,
+				5F76E6F81DCE4EC30074B6F7 /* CellDetailVideoRow3.swift in Sources */,
 				5F2138761DC85E000021DBD7 /* Video.swift in Sources */,
 				5FD5DEA01DCA1944000F5C75 /* DetailVideo.swift in Sources */,
 				5F3E20551DC8F08F0019FF6D /* Setting.swift in Sources */,
@@ -367,6 +390,7 @@
 				5F2138741DC85C140021DBD7 /* ManagerData.swift in Sources */,
 				5F3C90451DC861B40004E58B /* Channel.swift in Sources */,
 				5FF36EF01DC9B79500FC9DA1 /* DetailSettings.swift in Sources */,
+				5F1B60971DCF01AC00362965 /* SmallVideo.swift in Sources */,
 				5FE0A4C11DC91EFB009B3B56 /* CellSetting.swift in Sources */,
 				5F237DDD1DC73D5F000D9AFE /* ExtensionColor.swift in Sources */,
 			);
